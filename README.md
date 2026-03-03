@@ -1,6 +1,6 @@
 # vuejs-cms
 
-This repository combines a Vue.js frontend with an Express/MongoDB backend to form a minimal CMS.
+This repository combines a Vue.js frontend with an Express/PostGreSQL backend to form a minimal CMS.
 
 ## Getting started
 

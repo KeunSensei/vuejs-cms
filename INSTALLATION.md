@@ -19,8 +19,8 @@ cd server
 2. Copy the environment file and edit values:
 
 ```bash
-cp .env .env.local
-# Edit .env.local and set DATABASE_URL (e.g. postgresql://user:pass@localhost:5432/vuejs_cms)
+cp .env.example .env
+# Edit .env and set DATABASE_URL (e.g. postgresql://user:pass@localhost:5432/vuejs_cms)
 ```
 
 If you are running Postgres locally and want a simple database, create it with:
