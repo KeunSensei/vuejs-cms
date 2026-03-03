@@ -2,6 +2,7 @@
   <div class="admin">
     <h1>Admin Panel</h1>
     <router-link to="/admin/create">Create New Post</router-link>
+    <button @click="logout" style="margin-left:1rem">Logout</button>
     <ul>
       <li v-for="post in posts" :key="post.id">
         <h3>{{ post.title }}</h3>
@@ -44,8 +45,14 @@ export default defineComponent({
       }
     };
 
+    const logout = () => {
+      localStorage.removeItem('token');
+      delete (axios.defaults.headers.common as any)['Authorization'];
+      router.push({ name: 'Login' });
+    };
+
     onMounted(fetchPosts);
-    return { posts, edit, remove };
+    return { posts, edit, remove, logout };
   }
 });
 </script>
