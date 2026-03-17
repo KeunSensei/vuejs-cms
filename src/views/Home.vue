@@ -16,7 +16,7 @@ import axios from 'axios';
 
 export default defineComponent({
   setup() {
-    const posts = ref([]);
+    const posts = ref<{ id: number; title: string; content: string }[]>([]);
 
     const fetchPosts = async () => {
       try {
